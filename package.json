@@ -1,0 +1,21 @@
+{
+  "author": "Santosh Kumar <santosh79@gmail.com> (https://github.com/santosh79)",
+  "name": "traffic_cop",
+  "description": "Super lightweight messaging (pubsub and queue) system with no dependencies",
+  "version": "0.9.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:santosh79/traffic_cop.git"
+  },
+  "engines": {
+    "node": "~0.6.8"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "homepage": "https://github.com/santosh79/traffic_cop",
+  "main": "TrafficCop/start",
+  "scripts": {
+    "test": "vows test/*"
+  }
+}
