@@ -55,7 +55,7 @@ Traffic Cop uses a binary protocol where every packet has the format:
 	
 ![Traffic Cop Packet Info](https://img.skitch.com/20120311-jkxs8rpqa8pxq116cm26s5b4wp.png)
 
-As of this writing, Publish messages have message type of 1, subscribe messages have message type of 2.
+As of this writing, Publish messages have message type of **1**, subscribe messages have message type of **2**.
  
 ####Author
 
