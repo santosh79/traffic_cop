@@ -5,7 +5,7 @@ Traffic Cop is a blazing fast, simple, pure JS messsaging system built on [NodeJ
 Most of what a messaging system does is [IO bound](http://en.wikipedia.org/wiki/IO_bound). This makes using a non-blocking IO framework like NodeJS a great fit. Multi-threaded servers are a great idea when you are CPU bound. With messaging systems on the other hand, they spend most of their time receiving packets, figuring out who to send them to and sending them. None, of these activities are CPU intensive.  Threading or even actor based models for high IO server are just wrong and incredibly hard to debug. With TrafficCop the focus is three-fold:
 
 1. Simplicity - Keep the project under 1K LOC. **No** external dependencies. No long/impenetrable spec (AMQP), just a simple, obvious binary protocol.
-2. Performance - Traffic Cop uses a dead simple, binary, encoding free protocol. Your data can  [messagepack](http://msgpack.org/), [JSON](http://json.org/) or any other custom encoding - traffic cop doesn't care. The advantage this has is that the traffic cop server needn't spend CPU cycles encoding/decoding packets, which makes it even more efficient at just shuffling data around.
+2. Performance - Traffic Cop uses a dead simple, binary, encoding free protocol. Your data can be in [messagepack](http://msgpack.org/), [JSON](http://json.org/) or any other custom encoding - traffic cop doesn't care. The advantage this has is that the traffic cop server needn't spend CPU cycles encoding/decoding packets, which makes it even more efficient at just shuffling data around.
 3. Robustness - Codebase is obvious and well-tested. Most of the great tools you use for analyzing debugging NodeJS apps such as [DTrace](http://dtrace.org/blogs/) can be used.
 
 
