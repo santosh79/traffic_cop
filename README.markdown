@@ -1,8 +1,8 @@
 ###Traffic Cop
-Traffic Cop is a blazing fast, pure JS messsaging system built on [NodeJS](http://nodejs.org/).
+Traffic Cop is a blazing fast, simple, pure JS messsaging system built on [NodeJS](http://nodejs.org/).
 
 ### Why another messaging system?
-Most of what a messaging system does is [IO bound](http://en.wikipedia.org/wiki/IO_bound). This makes using a non-blocking IO framework like NodeJS a great fit. Multi-threaded servers are aa great idea when you are CPU bound. With messaging systems on the other hand, they spend most of their time receiving packets, figuring out who to send them to and sending them. None, of these activities are CPU intensive.  Threading or even actor based models for high IO server are just wrong and incredibly hard to debug.
+Most of what a messaging system does is [IO bound](http://en.wikipedia.org/wiki/IO_bound). This makes using a non-blocking IO framework like NodeJS a great fit. Multi-threaded servers are a great idea when you are CPU bound. With messaging systems on the other hand, they spend most of their time receiving packets, figuring out who to send them to and sending them. None, of these activities are CPU intensive.  Threading or even actor based models for high IO server are just wrong and incredibly hard to debug.
 
 1. Simplicity - Keep the project under 1K LOC. **No** external dependencies. No long/impenetrable spec (AMQP), just a simple, obvious binary protocol.
 2. Performance - Traffic Cop uses a dead simple, binary, encoding free protocol. Your data can  [messagepack](http://msgpack.org/), [JSON](http://json.org/) or any other custom encoding - traffic cop doesn't care. The advantage this has is that the traffic cop server needn't spend CPU cycles encoding/decoding packets, which makes it even more efficient at just shuffling data around.
@@ -10,7 +10,11 @@ Most of what a messaging system does is [IO bound](http://en.wikipedia.org/wiki/
 
 
 ### Performance Benchmarks
-TBD
+Running on my Core i7 1.6Ghz Mac Book Air I was able to clock about 60K+ messages per second.
+
+![Performance Benchmark](https://img.skitch.com/20120312-xdcarc4qa15ekur23shd1njgp9.png)
+
+The rest of the comparison has been pulled in from [this article](http://mikehadlow.blogspot.com/2011/04/message-queue-shootout.html) that compares various MQ'ing systems. Note ZeroMQ, is not a MQ system, although it's pretty awesome. Clustering plans are in the works that are only going to make this even faster, so stay tuned.
 
 ### Server stuff
 #### Installation
