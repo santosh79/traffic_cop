@@ -10,7 +10,7 @@ Most of what a messaging system does is [IO bound](http://en.wikipedia.org/wiki/
 
 
 ### Performance Benchmarks
-Running on my Core i7 1.6Ghz Mac Book Air I was able to clock about 60K+ messages per second.
+Running on my Core i7 1.6Ghz Mac Book Air I was able to clock about 60K+ messages per second. Here's a comparison with similar systems out there:
 
 ![Performance Benchmark](https://img.skitch.com/20120312-xdcarc4qa15ekur23shd1njgp9.png)
 
