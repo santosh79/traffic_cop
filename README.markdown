@@ -16,28 +16,27 @@ Running on my Core i7 1.6Ghz Mac Book Air, I was able to clock about 60K+ messag
 
 The rest of the comparison has been pulled in from [this article](http://mikehadlow.blogspot.com/2011/04/message-queue-shootout.html) that compares various MQ'ing systems. Note ZeroMQ, is not a MQ system, although it's pretty awesome. Clustering plans are in the works that are only going to make this even faster, so stay tuned.
 
-### Server stuff
-#### Installation
+### Installating the server
+You'd need Node and NPM, so in case you do not have them head on over to [NodeJS.org](http://nodejs.org). If you have those, installing the server is as simple as:
+
 	sudo npm install -g traffic_cop
 
 #### Starting the server
 	
 	tc-server
 
-The server defaults to running on port 3542. You can change this while starting the server:
+The server defaults to running on port **3542**. You can change this by starting the server with the -p option:
 	
 	tc-server -p 3000
-	
-### Client stuff
 
 #### Connecting to the server
-You'd need the traffic_cop npm package installed, so in case you do not have it, add it to your project:
+In order to connect to the server, you'd need the [Traffic Cop Client](https://github.com/santosh79/traffic_cop_client) npm module. Go ahead and run:
 
-	npm install traffic_cop
+	npm install traffic_cop_client
 
 You can now publish and subscribe:
 
-	var tc = require('traffic_cop');
+	var tc = require('traffic_cop_client');
 	var publisher = tc.createClient('localhost', 3542);
 	var subscriber = tc.createClient('localhost', 3542);
 	
@@ -50,6 +49,8 @@ You can now publish and subscribe:
 	  publisher.publish('channel_one', 'Hi there');
 	}, 2000);
 	 
+I plan on writing drivers for other languages as well, so programs written in say Ruby or Java can publish and subscribe to the Traffic Cop server. If you'd like to help write a driver in a language you know, please check out the [binary protocol](https://github.com/santosh79/traffic_cop/wiki/Protocol) to help get started.
+
 ####Author
 
 Santosh Kumar :: santosh79@gmail.com :: @santosh79
