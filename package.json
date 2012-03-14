@@ -2,7 +2,7 @@
   "author": "Santosh Kumar <santosh79@gmail.com> (https://github.com/santosh79)",
   "name": "traffic_cop",
   "description": "Super lightweight messaging system with no dependencies",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {
     "type": "git",
     "url": "git@github.com:santosh79/traffic_cop.git"
