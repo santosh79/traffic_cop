@@ -30,7 +30,9 @@ The server defaults to running on port **3542**. You can change this by starting
 	tc-server -p 3000
 
 #### Connecting to the server
-In order to connect to the server, you'd need the [Traffic Cop Client](https://github.com/santosh79/traffic_cop_client) npm module. Go ahead and run:
+If you are using a language other than Javascript check out the [**clients page**](https://github.com/santosh79/traffic_cop/wiki/Clients) for listing of TrafficCop clients to find a listing in your language of choice.
+
+If you are using NodeJS, in order to connect to the server, you'd need the [Traffic Cop Client](https://github.com/santosh79/traffic_cop_client) npm module. Go ahead and run:
 
 	npm install traffic_cop_client
 
