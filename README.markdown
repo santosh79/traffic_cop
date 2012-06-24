@@ -9,13 +9,6 @@ Most of what a messaging system does is [IO bound](http://en.wikipedia.org/wiki/
 3. Robustness - Codebase is obvious and well-tested. Most of the great tools you use for analyzing debugging NodeJS apps such as [DTrace](http://dtrace.org/blogs/) can be used.
 
 
-### Performance Benchmarks
-Running on my Core i7 1.6Ghz Mac Book Air, I was able to clock about 60K+ messages per second. Here's a comparison with similar systems out there:
-
-![Performance Benchmark](https://img.skitch.com/20120312-xdcarc4qa15ekur23shd1njgp9.png)
-
-The rest of the comparison has been pulled in from [this article](http://mikehadlow.blogspot.com/2011/04/message-queue-shootout.html) that compares various MQ'ing systems. Note ZeroMQ, is not a MQ system, although it's pretty awesome. Clustering plans are in the works that are only going to make this even faster, so stay tuned.
-
 ### Installating the server
 You'd need Node and NPM, so in case you do not have them head on over to [NodeJS.org](http://nodejs.org). If you have those, installing the server is as simple as:
 
