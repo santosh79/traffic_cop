@@ -8,7 +8,7 @@
     "url": "git@github.com:santosh79/traffic_cop.git"
   },
   "engines": {
-    "node": "~0.6.8"
+    "node": ">= 0.6.8"
   },
   "preferGlobal": "true",
   "bin": { "tc-server": "./lib/startServer.js" },
